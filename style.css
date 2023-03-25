@@ -1,0 +1,359 @@
+:root {
+    --secondary-color: #b1875f;
+    --dark-color: #222222;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h3 {
+    font-size: 2.2em;
+    text-align: center;
+}
+
+h3 span {
+    color: var(--secondary-color);
+}
+
+nav {
+    background-color: rgba(0, 0, 0, .9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 0px 10px 0px var(--secondary-color);
+
+    z-index: 9999;
+}
+
+.container.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container.nav .brand {
+    font-size: 2em;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.container.nav .brand span {
+    color: var(--secondary-color);
+}
+
+.container.nav .link {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    flex: 1;
+}
+
+.container.nav .link a {
+    font-size: 1.1em;
+    text-decoration: none;
+    color: white;
+    padding: 0.3em 1em;
+}
+
+.container.nav .link a:hover {
+    color: var(--secondary-color);
+}
+
+.container.nav #link-toggle {
+    display: none;
+    font-size: 1.5em;
+}
+
+section.hero {
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+section.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0) 40%);
+}
+
+.container.hero {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+}
+
+.container.hero .cta {
+    position: relative;
+    z-index: 1;
+    width: 40%;
+    text-align: end;
+}
+
+.container.hero .cta h2 {
+    font-size: 4em;
+    line-height: 1em;
+}
+
+.container.hero .cta h2 span {
+    color: var(--secondary-color);
+}
+
+.container.hero .cta p {
+    font-size: 1.5em;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+.container.hero .cta .cta-btn {
+    font-size: 1em;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: white;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+}
+
+.container.hero .cta .cta-btn:hover {
+    color: var(--secondary-color);
+    background-color: white;
+}
+
+section.about {
+    width: 100%;
+    padding: 50px 0;
+}
+
+.container.about {}
+
+.container.about .about-body {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.container.about .about-body img {
+    width: 50%;
+    position: relative;
+}
+
+.container.about .about-body .about-body-desc {
+    width: 50%;
+}
+
+.container.about .about-body .about-body-desc h4 {
+    font-size: 1.7em;
+}
+
+.container.about .about-body .about-body-desc p {
+    font-size: .9em;
+}
+
+
+section.menu {
+    width: 100%;
+    padding: 50px 0;
+}
+
+.container.menu {}
+
+.container.menu .menu-header {
+    text-align: center;
+}
+
+.container.menu .menu-header p {
+    font-weight: 100;
+    margin: 0 auto;
+    width: 40%;
+    font-size: .9em;
+}
+
+.container.menu .menu-body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    row-gap: 40px;
+    column-gap: 20px;
+    padding-top: 50px;
+}
+
+.container.menu .menu-body .menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container.menu .menu-body .menu-item .item-img {
+    width: 70%;
+    overflow: hidden;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.container.menu .menu-body .menu-item .item-img:hover {
+    transform: scale(1.1);
+}
+
+.container.menu .menu-body .menu-item .item-img img {
+    width: 100%;
+}
+
+.container.menu .menu-body .menu-item .item-title {
+    font-size: 1.2em;
+}
+
+.container.menu .menu-body .menu-item .item-price {
+    font-weight: 100;
+}
+
+@media screen and (max-width:1024px) {
+
+    h3 {
+        font-size: 2em;
+    }
+
+    .container.nav .brand {
+        font-size: 1.5em;
+    }
+
+    .container.nav .link {
+        font-size: .8em;
+    }
+
+    .container.hero .cta h2 {
+        font-size: 3em;
+    }
+
+    .container.hero .cta p {
+        font-size: 1.2em;
+    }
+
+    .container.menu .menu-header p {
+        font-size: .8em;
+        width: 70%;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+
+    h3 {
+        font-size: 1.8em;
+    }
+
+
+    .container.nav #link-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .container.nav .link {
+        position: absolute;
+        width: 100%;
+        right: -100vh;
+        top: 100%;
+        flex-direction: column;
+        background-color: white;
+        padding: 10px 0;
+        transition: .5s;
+    }
+
+    .container.nav .link.show {
+        right: 0;
+    }
+
+    .container.nav .link a {
+        color: black;
+        width: 80%;
+        margin: 0 auto;
+        padding: 0.3em 0;
+    }
+
+    section.hero::after {
+        background-image: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    .container.hero .cta {
+        width: 100%;
+        text-align: center;
+    }
+
+    .container.hero .cta p {
+        text-shadow: 0px 3px 5px black;
+    }
+
+    .container.menu .menu-header p {
+        font-size: .8em;
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width:576px) {
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    .container.nav .brand {
+        font-size: 1.2em;
+    }
+
+    .container.nav #link-toggle {
+        font-size: 1.1em;
+    }
+
+    .container.hero .cta h2 {
+        font-size: 2.5em;
+    }
+
+    .container.hero .cta p {
+        font-size: 1em;
+    }
+
+    .container.about .about-body img {
+        display: none;
+    }
+
+    .container.about .about-body .about-body-desc {
+        flex: 1;
+    }
+
+    .container.menu .menu-header p {
+        font-size: .7em;
+        width: 80%;
+    }
+}
