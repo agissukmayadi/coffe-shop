@@ -357,10 +357,14 @@ footer .link-footer a:hover {
     color: var(--dark-color);
 }
 
+footer .copyright {
+    font-size: .8em;
+
+}
+
 footer .copyright span {
     color: var(--dark-color);
     cursor: pointer;
-    font-size: .8em;
 }
 
 
