@@ -48,6 +48,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: .5em 0;
 }
 
 .container.nav .brand {
@@ -74,7 +75,7 @@ nav {
     font-size: 1.1em;
     text-decoration: none;
     color: white;
-    padding: 0.3em 1em;
+    margin: 0 .5em;
 }
 
 .container.nav .link a:hover {
@@ -264,6 +265,10 @@ section.menu {
         font-size: 2em;
     }
 
+    .container.nav .link a {
+        font-size: 1em;
+    }
+
     .container.hero .cta h2 {
         font-size: 3em;
     }
@@ -340,11 +345,11 @@ section.menu {
     }
 
     .container.nav .brand {
-        font-size: 1.4em;
+        font-size: 1.7em;
     }
 
     .container.nav #link-toggle {
-        font-size: 1.3em;
+        font-size: 1.5em;
     }
 
     .container.hero .cta h2 {
